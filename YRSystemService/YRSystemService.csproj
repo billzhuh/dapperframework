@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FA58959-F8E8-4206-98B4-13023E1CC60A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YRSystemService</RootNamespace>
+    <AssemblyName>YRSystemService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="AccountService.cs" />
+    <Compile Include="OrderInfoService.cs" />
+    <Compile Include="ProductService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DapperEx\DapperEx.csproj">
+      <Project>{0090afd4-84e9-43b1-aa53-a4faae9b1cc5}</Project>
+      <Name>DapperEx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IYRSystemDAL\IYRSystemDAL.csproj">
+      <Project>{382ea0bf-d6d3-4688-9390-8aca8d2a2c65}</Project>
+      <Name>IYRSystemDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IYRSystemService\IYRSystemService.csproj">
+      <Project>{5aaa7ac3-5a01-4edc-b75a-92a71bf2e1e1}</Project>
+      <Name>IYRSystemService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YRStstemModel\YRStstemModel.csproj">
+      <Project>{643009fd-8844-4fc5-88d7-cff166b0c90d}</Project>
+      <Name>YRStstemModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YRSystemDAL\YRSystemDAL.csproj">
+      <Project>{62d698c5-df1a-4958-9c69-1f5b68e4b7fa}</Project>
+      <Name>YRSystemDAL %28YRSystemDAL\YRSystemDAL%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

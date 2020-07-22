@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <object name="OrderInfoDAL" type="YRSystemDAL.OrderInfoDAL, YRSystemDAL" singleton="false" >
+  </object>
+</objects>

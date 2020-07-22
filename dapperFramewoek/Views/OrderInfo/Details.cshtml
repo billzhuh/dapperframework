@@ -1,0 +1,43 @@
+﻿@model dapperFramewoek.Models.OrderInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>OrderInfo</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrderNum)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderNum)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrderDes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderDes)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AccountID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AccountID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.productname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.productname)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
